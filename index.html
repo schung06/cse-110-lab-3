@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Meeting Minutes</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+    <font face="Arial">
+    <header> 
+        <nav class="nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="current">Attendees</a></li>
+                    <li><a href="#">Agenda</a></li>
+                    <li><a href="#">Action Items</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="container">
+            <img src="hero.gif" alt="Hero Image" width="500" height="300" />
+            <span style="color:darkcyan"><h1>Stephanie's Meeting Minutes</h1></span>
+            <h2>Date: April 10, 2026</h2>
+            <h2>Attendees: Stephanie Chung, John Doe, Jane Smith</h2>
+            <h2>Location: CSE</h2>
+        </div>
+    </div>
+    <main>
+        <hr/>
+        <section id="agenda">
+            <h2>Meeting Agenda</h2>
+            <ol>
+                <li><b>Quick Icebreaker</b> : Each member talked about their weekend plans.</li>
+                <li><b>Overall Team Updates</b> : Each member checked in with their progress on assigned tasks.</li>
+            </ol>
+        </section>
+        <hr/>
+        <section id="summary">
+            <h2>Meeting Summary</h2>
+            <details>
+                <summary>Click to expand full summary</summary>
+                <p>The team had a quick icebreaker discussing weekend plans. We then each talked about our individual progress on assigned tasks from last meeting.</p>
+            </details>
+            <br />
+            <p><strong>TL;DR The team gave individual progress updates and will begin working on</strong>: <em>the website's nav bar and form submission.</em></p>
+        </section>
+        <hr/>
+        <section id="action-items">
+            <h2>Action Items</h2>
+            <a>To be done by next meeting:</a>
+            <ul>
+                <li><b>Stephanie Chung</b> : Debug nav bar issue on home page</li>
+                <li><b>John Doe</b> : Start working on form submission</li>
+                <li><b>Jane Smith</b> : Finish UI design for About page</li>
+            </ul>
+            <p><i>Next meeting:</i> TBD</p>
+        </section>
+        <hr/>
+        <section id="media">
+            <h2>Meeting Gallery</h2>
+            <p>Audio and video recording of the meeting:</p>
+            <audio controls>
+                <source src="Meeting audio.m4a" type="audio/mpeg">
+            </audio>
+            <br />
+            <video width="400" height="300" controls>
+                <source src="Meeting video.mp4" type="video/mp4">
+            </video>
+        </section>
+        <hr />
+        <section id="form">
+            <h2>Scheduling Form</h2>
+            <form>
+                <fieldset>
+                    <legend>Schedule the next meeting!</legend>
+                    
+                    <label>
+                        <input type="text" name="name" placeholder="Your name" required />
+                        Name
+                    </label>
+                    <br />
+
+                    <label>
+                        <input type="date"/>
+                        Date
+                    </label>
+                    <br />
+
+                    <label for="ideas">Ideas for next meeting:</label>
+                    <br />
+                    <textarea name="ideas" id="ideas" rows="4" cols="50" placeholder="Input your ideas"></textarea>
+                    <br />
+
+                    <p>Will you make it?</p>
+                    <label>
+                        <input type="radio"/> Yes
+                    </label>
+                    <label>
+                        <input type="radio"/> No
+                    </label>
+                    <label>
+                        <input type="radio"/> Maybe
+                    </label>
+                    <br />
+
+                    <p>What do you want to talk about next meeting?</p>
+                    <label>
+                        <input type="checkbox" name="topics" /> Your individual updates
+                    </label>
+                    <label>
+                        <input type="checkbox" name="topics"  /> Team concerns
+                    </label>
+                    <br />
+
+                    <label for="location">Location:</label>
+                    <select id="location" name="location">
+                        <option value="">-- Select Location --</option>
+                        <option value="cse">CSE</option>
+                        <option value="geisel">Geisel Library</option>
+                        <option value="price">Price Center</option>
+                    </select>
+                    <br />
+
+                    <label for="meeting-type">Type of Meeting:</label>
+                    <input type="text" id="meeting-type" name="meeting-type" list="meeting-options" placeholder="Type or select..." />
+                    <datalist id="meeting-options">
+                        <option value="Over Zoom"></option>
+                        <option value="Over Discord Call"></option>
+                        <option value="In person"></option>
+                    </datalist>
+                    <br />
+
+                    <button type="submit">Submit Feedback</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p><b>Stephanie's Meeting Minutes</b></p>
+    </footer>
+    
+    </font>
+</body>
+
+</html>
