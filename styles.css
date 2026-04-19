@@ -88,3 +88,40 @@ button {
 button:hover {
     background-color: var(--accent-color-medium, #684fb5);
 }
+
+/*** Navbar styles ***/
+
+.nav {
+    position: fixed;
+    background-color: hsl(280, 50%, 20%);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 7px 10px;
+}
+
+.nav a.current,
+.nav a:hover {
+    color: var(--accent-color-light, #d627cd);
+    font-weight: bold;
+}
