@@ -31,7 +31,6 @@ body {
     color: var(--text-color);
     font-family: 'Roboto', sans-serif;
     padding-top: 80px;
-    padding-bottom: 50px;
 }
 
 .hero {
@@ -91,8 +90,98 @@ main {
     margin: 0 auto;
 }
 
+/*** scheduling form ***
+  Styles for the Scheduling Form. also putting a bunch of selectors in this section
+***/
 
-/*** Text ***
+#form {
+    background-color: violet;
+    border: var(--accent-color-dark, #482f95) solid;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#form {
+
+    & input,
+    & select,
+    & textarea {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.95em;
+        color: var(--text-color);
+    }
+
+    & textarea {
+        border: 2px solid var(--accent-color-medium);
+        border-radius: 8px;
+        padding: 8px;
+        resize: vertical;
+    }
+
+    & select {
+        border: 2px solid var(--accent-color-medium);
+        border-radius: 8px;
+        padding: 5px 8px;
+    }
+}
+
+fieldset {
+    background-color: color-mix(in srgb, var(--accent-color-light, #d627cd) 10%, white);
+    border: var(--accent-color-dark, #482f95) solid;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+input[type="text"] {
+    border: 2px solid var(--accent-color-medium);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+input[type="date"],
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--accent-color-medium);
+}
+
+fieldset > legend {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--accent-color-dark);
+    background-color: white;
+    padding: 0 8px;
+    margin-left: 30px;
+}
+
+br+label {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+textarea~p {
+    font-weight: bold;
+    color: var(--accent-color-medium);
+}
+
+button.submit {
+    display: block;
+    margin: 20px auto 0;
+}
+
+fieldset:has(input[type="radio"]:checked) {
+    background-color: color-mix(in srgb, var(--accent-color-light) 5%, white);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--accent-color-light);
+    outline-offset: none;
+}
+
+/*** Text Styles***
   Add style rules for headings, paragraphs, links (a), and buttons
 ***/
 
@@ -141,8 +230,8 @@ button {
     color: white;
     border: var(--accent-color-dark, #482f95) solid;
     border-radius: 25px;
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-size: 11pt;
+    letter-spacing: 0.7mm;
     padding: 10px 15px;
     overflow: hidden;
     margin: 10px 0;
@@ -196,5 +285,20 @@ button:hover {
 .nav a:hover {
     color: var(--accent-color-light, #d627cd);
     font-weight: bold;
+}
+
+/*** Footer styles ***/
+footer {
+    background-color: hsl(280, 50%, 20%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer p{
+    color: white;
 }
 
