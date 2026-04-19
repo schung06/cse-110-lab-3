@@ -13,6 +13,9 @@
     --accent-color-medium: #684fb5;
     --accent-color-dark: #482f95;
     --accent-color-darkest: #231942;
+
+    /* button colors */
+    --active-button-color: color(display-p3 0.8 0.1 0.7);
 }
 
 /*** body ***
@@ -124,8 +127,10 @@ main {
     padding: 20px;
 }
 
+/* nested selectors that throws CSS validator error(which is fine) */
 #form {
 
+    background-color: var(--accent-color-light, #d627cd);
     & input,
     & select,
     & textarea {
@@ -273,7 +278,7 @@ button:hover {
 }
 
 button:active {
-    color: color(display-p3 0.8 0.1 0.7);
+    color: var(--active-button-color);
 }
 
 /*** Navbar styles ***/
