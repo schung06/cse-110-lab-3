@@ -73,19 +73,40 @@ main {
     padding: 20px;
 }
 
+#action-items ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 10px;
+}
+
 /*** Media Gallery ***
   Styles for picture, video, and audio elements
 ***/
 
-#media{
+#media {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#media image, #media video, #media audio {
+#media img {
+    min-width: 300px;
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#media video {
     max-width: 100%;
-    max-height: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#media audio {
+    max-width: 100%;
     border-radius: 10px;
     margin: 0 auto;
 }
@@ -96,7 +117,9 @@ main {
 
 #form {
     background-color: violet;
-    border: var(--accent-color-dark, #482f95) solid;
+    border-color: var(--accent-color-dark, #482f95);
+    border-style: solid;
+    border-width: 2px;
     border-radius: 10px;
     padding: 20px;
 }
@@ -165,9 +188,9 @@ textarea~p {
     color: var(--accent-color-medium);
 }
 
-button.submit {
+button.submit { 
     display: block;
-    margin: 20px auto 0;
+    margin: auto;
 }
 
 fieldset:has(input[type="radio"]:checked) {
@@ -178,7 +201,6 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: 3px solid var(--accent-color-light);
-    outline-offset: none;
 }
 
 /*** Text Styles***
@@ -206,6 +228,7 @@ h3 {
     text-align: left;
     margin: 20px;
     margin-left: 40px;
+    text-decoration: underline;
 }
 
 p, li, a {
@@ -249,6 +272,10 @@ button:hover {
     background-color: var(--accent-color-medium, #684fb5);
 }
 
+button:active {
+    color: color(display-p3 0.8 0.1 0.7);
+}
+
 /*** Navbar styles ***/
 
 .nav {
@@ -264,7 +291,8 @@ button:hover {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
+    flex-wrap: wrap;
 }
 
 .nav ul {
@@ -273,6 +301,7 @@ button:hover {
     align-items: center;
     justify-content: flex-start;
     gap: 5px;
+    flex-wrap: wrap;
 }
 
 .nav a {
@@ -285,6 +314,16 @@ button:hover {
 .nav a:hover {
     color: var(--accent-color-light, #d627cd);
     font-weight: bold;
+}
+
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+    
+    body{
+        padding-top: 120px;
+    }
 }
 
 /*** Footer styles ***/
